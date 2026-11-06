@@ -1,0 +1,20 @@
+# Netlify: the read-only static demo of the SalesFlow site (no API server, no database).
+# Deploy from this folder (frontend). The data lives in public/static-data/, exported from the warehouse with
+#   python backend/scripts/export_static.py
+# and every page computes its numbers in the browser (frontend/src/lib/static-api.ts).
+[build]
+  command = "npm run build"
+  publish = ".next-netlify"
+
+[build.environment]
+  NEXT_PUBLIC_STATIC_DATA = "1"
+  NEXT_PUBLIC_API_BASE_URL = "/"
+  NEXT_TELEMETRY_DISABLED = "1"
+  NODE_VERSION = "24"
+  NEXT_DIST_DIR = ".next-netlify"   # keeps the local dev server's .next folder out of the way
+
+# The data files change only when re-exported; let browsers revalidate them.
+[[headers]]
+  for = "/static-data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

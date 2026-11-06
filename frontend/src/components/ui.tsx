@@ -8,15 +8,17 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { ApiError } from "@/lib/api";
 import { count } from "@/lib/format";
 import { useI18n } from "@/lib/i18n";
-import { PageTitle, Reveal } from "./motion";
+import { HeroRays, HeroTitle, PageTitle, Reveal } from "./motion";
 
 // ---------------------------------------------------------------- layout
 
-export function PageHeader({ title, description, actions }: { title: string; description?: ReactNode; actions?: ReactNode }) {
+/** Page title row. `hero` (home page) adds the blur-in title and the light-ray backdrop. */
+export function PageHeader({ title, description, actions, hero }: { title: string; description?: ReactNode; actions?: ReactNode; hero?: boolean }) {
   return (
-    <header className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+    <header className={clsx("mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between", hero && "relative isolate pb-2")}>
+      {hero && <HeroRays />}
       <div className="max-w-2xl">
-        <PageTitle text={title} />
+        {hero ? <HeroTitle text={title} /> : <PageTitle text={title} />}
         {description && <div className="mt-1.5 text-[0.95rem] leading-relaxed text-muted">{description}</div>}
       </div>
       {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}

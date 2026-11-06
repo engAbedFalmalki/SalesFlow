@@ -3,11 +3,16 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import type { ReactNode, RefObject } from "react";
+import { LoaderCircle } from "lucide-react";
+import { useReducedMotion } from "motion/react";
+import { useEffect, useState, type MouseEventHandler, type ReactNode, type RefObject } from "react";
 import AnimatedContent from "../reactbits/AnimatedContent";
+import BlurText from "../reactbits/BlurText";
 import CountUp from "../reactbits/CountUp";
+import LightRays from "../reactbits/LightRays";
 import SplitText from "../reactbits/SplitText";
 import SpotlightCard from "../reactbits/SpotlightCard";
+import StarBorder from "../reactbits/StarBorder";
 import { useI18n } from "@/lib/i18n";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -34,9 +39,102 @@ export function PageTitle({ text }: { text: string }) {
       duration={0.8}
       from={{ opacity: 0, y: 24 }}
       to={{ opacity: 1, y: 0 }}
-      className="text-[1.75rem] font-semibold leading-tight tracking-[-0.01em]"
+      className={TITLE_CLASS}
     />
   );
+}
+
+const TITLE_CLASS = "text-[1.75rem] font-semibold leading-tight tracking-[-0.01em]";
+
+/** Home page title: words come into focus once on load (React Bits BlurText), without overshoot. */
+export function HeroTitle({ text }: { text: string }) {
+  return (
+    <BlurText
+      key={text}
+      tag="h1"
+      text={text}
+      trigger="load"
+      animateBy="words"
+      delay={90}
+      stepDuration={0.7}
+      animationFrom={{ filter: "blur(8px)", opacity: 0, y: -10 }}
+      animationTo={[{ filter: "blur(0px)", opacity: 1, y: 0 }]}
+      easing={[0.22, 1, 0.36, 1]}
+      className={TITLE_CLASS}
+    />
+  );
+}
+
+/** Resolved value of a colour token (canvas and WebGL can't read CSS variables). Empty until mounted. */
+function useCssColor(token: string): string {
+  const [value, setValue] = useState("");
+  useEffect(() => setValue(getComputedStyle(document.documentElement).getPropertyValue(token).trim()), [token]);
+  return value;
+}
+
+/**
+ * Faint light rays in the accent colour behind the home page header (React Bits LightRays).
+ * Decorative only: no pointer tracking or click bursts, fades out towards the content,
+ * and holds still under prefers-reduced-motion.
+ */
+export function HeroRays() {
+  const color = useCssColor("--color-accent");
+  const reduced = useReducedMotion();
+  if (!color) return null;
+  return (
+    <div aria-hidden className="hero-rays pointer-events-none absolute -inset-x-4 -top-6 -z-10 h-[calc(100%+4rem)] sm:-inset-x-6 lg:-inset-x-10 lg:-top-8">
+      <LightRays
+        raysOrigin="top-center"
+        raysColor={color}
+        lightMode
+        raysSpeed={reduced ? 0 : 0.45}
+        intro={!reduced}
+        lightSpread={0.8}
+        rayLength={1.8}
+        intensity={1.9}
+        opacity={0.8}
+        glow={0.6}
+        haze={0.2}
+        followMouse={false}
+        cursorShadow={false}
+        clickPulse={false}
+        maxDevicePixelRatio={1.5}
+      />
+    </div>
+  );
+}
+
+type PrimaryActionProps = {
+  children: ReactNode; href?: string; onClick?: MouseEventHandler; disabled?: boolean; busy?: boolean; className?: string;
+};
+
+/**
+ * A page's main action, with a slow light travelling round its border (React Bits StarBorder).
+ * Same size, colours and states as Button variant="primary"; renders a link when given href.
+ */
+export function PrimaryAction({ children, href, onClick, disabled, busy, className }: PrimaryActionProps) {
+  const star = useCssColor("--color-accent-soft");
+  const off = disabled || busy;
+  const common = {
+    theme: "dark" as const,
+    color: star || undefined,
+    backgroundColor: "var(--sf-primary-bg, var(--color-accent))",
+    textColor: "white",
+    radius: 6,
+    duration: 6,
+    trailLength: 0.35,
+    glow: 0.35,
+    hover: "brighten" as const,
+    clickPulse: false,
+    className: ["h-10 gap-1.5 px-4! py-0! text-sm hover:[--sf-primary-bg:var(--color-accent-strong)]",
+      href && off ? "pointer-events-none opacity-50" : "", className].filter(Boolean).join(" "),
+  };
+  const content = <>{busy && <LoaderCircle className="size-4 animate-spin" aria-hidden />}{children}</>;
+  if (href !== undefined) {
+    // A disabled link keeps its href (as before) but can't be clicked or tabbed to.
+    return <StarBorder {...common} as="a" href={href || undefined} aria-disabled={off || undefined} tabIndex={off ? -1 : undefined} onClick={onClick}>{content}</StarBorder>;
+  }
+  return <StarBorder {...common} onClick={onClick} disabled={off} aria-busy={busy || undefined}>{content}</StarBorder>;
 }
 
 /**

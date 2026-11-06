@@ -42,4 +42,8 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  /* BlurText animates with inline styles; show the title as plain text instead. */
+  .blur-text [aria-hidden="true"] { opacity: 1 !important; filter: none !important; transform: none !important; }
 }
+/* Light rays fade out before they reach the page content. */
+.hero-rays { mask-image: linear-gradient(to bottom, #000 35%, transparent); }

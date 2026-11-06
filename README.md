@@ -14,7 +14,7 @@ a FastAPI read/ops API, and a Next.js analytics app that reads only from the rea
 | Warehouse | SQL Server: `raw`, `stg`, `dw` (DimDate, DimCustomer, DimProduct, DimOrder, FactSalesLine, FactPaymentTransaction), `qa`, `meta` |
 | API | FastAPI 0.156 (OpenAPI at `/docs`) |
 | Web | Next.js 16, React 19, TypeScript, Tailwind CSS 4, Recharts 3, TanStack Query, Radix UI |
-| Motion | GSAP 3.15 + ScrollTrigger, Lenis 1.3 smooth scroll, React Bits components (AnimatedContent, CountUp, SplitText, SpotlightCard) |
+| Motion | GSAP 3.15 + ScrollTrigger, Lenis 1.3 smooth scroll, React Bits components (AnimatedContent, BlurText, CountUp, LightRays, SplitText, SpotlightCard, StarBorder) |
 | Tests | pytest (61 tests, real SQL Server), Playwright (16 browser tests against the running stack) |
 
 Docs: [architecture](docs/architecture.md) · [data dictionary](docs/data-dictionary.md) ·
@@ -142,6 +142,43 @@ progress, and `--confirm` equals the warehouse name. There is no reset API endpo
 
 ---
 
+## Hosted demo on Netlify (no server)
+
+Live at **https://salesflow-sa.netlify.app**. Netlify runs only the Next.js site, so this build has no API and
+no database: `backend/scripts/export_static.py` exports the warehouse to `frontend/public/static-data/`
+(exact read-only API responses for runs, quality, reconciliation and definitions, plus compact order, line and
+payment arrays), and `frontend/src/lib/static-api.ts` computes the overview, trend, top products, order list,
+order details and the Excel workbook in the browser with the same rules and rounding as the API. It is a
+read-only snapshot: pipeline, reprocess, review and test-purchase actions are disabled, and the data changes
+only when you export and deploy again. A Node check compared it with the live API on 187 requests (all
+equal).
+
+To update it after the warehouse changes (Netlify CLI, signed in with `netlify login`):
+
+```powershell
+.\backend\.venv\Scripts\python backend\scripts\export_static.py
+cd frontend
+npx netlify-cli deploy --prod --site salesflow-sa
+```
+
+`frontend/netlify.toml` sets the static mode (`NEXT_PUBLIC_STATIC_DATA=1`) and builds into `.next-netlify`,
+so a running local dev server doesn't block the build.
+
+## Share a public link (from this PC)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\public-link.ps1           # add -Rebuild after changing the site
+```
+
+The script builds a separate copy of the site (`frontend/.next-public`) that calls `/api` on its own
+address, starts a **read-only** API on port 8001 (`SALESFLOW_ENV=production`, `READ_ONLY=true`, so every
+write endpoint answers 403) and the site on port 3001, then opens a Cloudflare quick tunnel and prints a
+`https://….trycloudflare.com` link. Anyone with the link can browse the dashboard and download Excel
+exports; nobody can run the pipeline, reprocess or add purchases. The local development servers on
+8000/3000 are not affected. The link works only while the PC and the script are running, changes on
+every start, and quick tunnels have no uptime guarantee. Ctrl+C stops sharing. Needs `cloudflared`
+(`winget install --id Cloudflare.cloudflared`).
+
 ## Motion and smooth scrolling
 
 * **Lenis** (`frontend/src/components/motion/smooth-scroll.tsx`) smooths page scrolling and is driven by the
@@ -152,9 +189,14 @@ progress, and `--confirm` equals the warehouse name. There is no reset API endpo
   their own values.
 * **React Bits** (copied into `frontend/src/components/reactbits/` with their MIT + Commons Clause notice):
   `SplitText` page titles, `CountUp` KPI figures, `AnimatedContent` section reveals, `SpotlightCard` on
-  the summary panels (one local change: no forced radius or padding).
+  the summary panels (one local change: no forced radius or padding). On the Overview (home) page the title
+  comes into focus with `BlurText` (local change: a `tag` prop so it stays an `<h1>`), and faint `LightRays`
+  in the accent colour sit behind the header (WebGL2, no pointer tracking, fading out before the content).
+  Each page's main action (Run incremental, Reprocess open records, Export to Excel) has a slow `StarBorder`
+  light; buttons inside dialogs and drawers stay plain. Colours come from the CSS tokens in `globals.css`.
 * **Reduced motion**: with `prefers-reduced-motion: reduce`, smoothing is off (`data-smooth-scroll="off"`
-  on `<html>`) and content appears without animation.
+  on `<html>`) and content appears without animation: the title shows at once, the light rays and the
+  button light hold still.
 * **Exact numbers**: counters are display-only and land on the same text as the static formatter; the
   exact decimal stays in each figure's `title` and in the API.
 

@@ -1,5 +1,6 @@
 // Thin client for the SalesFlow FastAPI backend. Money arrives as decimal strings.
 
+// "/" means same origin: the public build (scripts/public-link.ps1) proxies /api to the backend.
 export const API_BASE = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://127.0.0.1:8000").replace(/\/$/, "");
 
 export class ApiError extends Error {
@@ -36,12 +37,61 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   return res.json() as Promise<T>;
 }
 
+// ---- static demo (Netlify): no server; data is read from /static-data and computed in the browser.
+export const STATIC_DATA = process.env.NEXT_PUBLIC_STATIC_DATA === "1";
+const EXPORT_LIMIT = 50_000; // same as the API's max_export_rows
+
+let staticApi: Promise<import("./static-api").StaticApi> | null = null;
+function loadStatic() {
+  staticApi ??= (async () => {
+    const load = (name: string) => fetch(`/static-data/${name}.json`).then((r) => {
+      if (!r.ok) throw new Error(String(r.status));
+      return r.json();
+    });
+    const [{ createStaticApi }, snap, data] = await Promise.all([import("./static-api"), load("snapshots"), load("data")]);
+    return createStaticApi(snap, data);
+  })().catch((e) => {
+    staticApi = null; // let a retry try again
+    throw new ApiError(0, "NETWORK", `Could not load the demo data (${e instanceof Error ? e.message : e}).`);
+  });
+  return staticApi;
+}
+
+async function staticGet<T>(path: string, params: Params): Promise<T> {
+  const engine = await loadStatic();
+  try {
+    return engine.get(path, params) as T;
+  } catch (e) {
+    const err = e as { status?: number; code?: string; message?: string };
+    throw new ApiError(err.status ?? 500, err.code ?? "ERROR", err.message ?? "Unexpected error.");
+  }
+}
+
+const readOnly = <T>(): Promise<T> =>
+  Promise.reject(new ApiError(403, "READ_ONLY", "This demo is read-only; pipeline and review actions are disabled."));
+
 export const api = {
-  get: <T>(path: string, params: Params = {}) => request<T>(path + qs(params)),
-  post: <T>(path: string, body: unknown) => request<T>(path, { method: "POST", body: JSON.stringify(body) }),
-  patch: <T>(path: string, body: unknown) => request<T>(path, { method: "PATCH", body: JSON.stringify(body) }),
+  get: <T>(path: string, params: Params = {}) => (STATIC_DATA ? staticGet<T>(path, params) : request<T>(path + qs(params))),
+  post: <T>(path: string, body: unknown) => (STATIC_DATA ? readOnly<T>() : request<T>(path, { method: "POST", body: JSON.stringify(body) })),
+  patch: <T>(path: string, body: unknown) => (STATIC_DATA ? readOnly<T>() : request<T>(path, { method: "PATCH", body: JSON.stringify(body) })),
   url: (path: string, params: Params = {}) => `${API_BASE}${path}${qs(params)}`,
 };
+
+/** Static demo only: builds the orders workbook in the browser and downloads it. */
+export async function downloadStaticOrdersXlsx(f: import("./static-export").ExportFilters, lang: "en" | "ar", filters?: import("./hooks").Filters) {
+  const engine = await loadStatic();
+  const rows = engine.exportRows(f, EXPORT_LIMIT);
+  const { buildOrdersWorkbook } = await import("./static-export");
+  const wb = await buildOrdersWorkbook(rows, f, lang, filters, EXPORT_LIMIT);
+  const blob = new Blob([await wb.xlsx.writeBuffer()], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `salesflow_orders_${f.date_from}_${f.date_to}.xlsx`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 10_000);
+}
 
 // ---- response shapes (only the fields the UI uses)
 export type Metric = { value: string | number | null; previous: string | number | null; change: string | number | null; change_pct: string | null };

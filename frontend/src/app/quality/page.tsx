@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useRef, useState } from "react";
-import { Figure, SpotlightPanel, useBarReveal } from "@/components/motion";
+import { Figure, PrimaryAction, SpotlightPanel, useBarReveal } from "@/components/motion";
 import { Badge, Button, ConfirmDialog, Drawer, Empty, ErrorState, Field, inputClass, KeyValue, Loading, Notice, PageHeader, Pagination, Panel, Section, Segmented, Select, td, th, type Tone } from "@/components/ui";
 import { api, ApiError } from "@/lib/api";
 import { count, dateTime } from "@/lib/format";
@@ -145,7 +145,7 @@ function QualityInner() {
   return (
     <>
       <PageHeader title={t("q.title")} description={t("q.desc")}
-        actions={<Button variant="primary" onClick={() => setReprocess({ codes: [] })} disabled={!byStatus.open || health.data?.read_only}><RotateCcw className="size-4" aria-hidden /> {t("q.reprocessAll")}</Button>} />
+        actions={<PrimaryAction onClick={() => setReprocess({ codes: [] })} disabled={!byStatus.open || health.data?.read_only}><RotateCcw className="size-4" aria-hidden /> {t("q.reprocessAll")}</PrimaryAction>} />
 
       {start.isSuccess && <div className="mb-4" aria-live="polite"><ReprocessOutcome key={start.data.run_id} runId={start.data.run_id} /></div>}
       {start.isError && <div className="mb-4"><Notice tone="bad">{(start.error as ApiError).message}</Notice></div>}

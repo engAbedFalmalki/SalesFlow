@@ -177,7 +177,7 @@ function OverviewInner() {
   }
   return (
     <>
-      <PageHeader title={t("ov.title")} description={<FreshnessLine />}
+      <PageHeader hero title={t("ov.title")} description={<FreshnessLine />}
         actions={ready && min && max ? <DateRangeControl from={from!} to={to!} min={min} max={max} onChange={setRange} /> : <Skeleton className="h-10 w-96" />} />
 
       {ov.isError ? <ErrorState error={ov.error} onRetry={() => ov.refetch()} /> : (

@@ -4,6 +4,7 @@ import { keepPreviousData, useMutation, useQuery, useQueryClient } from "@tansta
 import { FlaskConical, Play } from "lucide-react";
 import { Suspense, useEffect, useState } from "react";
 import { RunDrawer, StageList, useDescribeParams } from "@/components/run-drawer";
+import { PrimaryAction } from "@/components/motion";
 import { Badge, Button, ConfirmDialog, Empty, ErrorState, Loading, Notice, PageHeader, Pagination, Panel, RUN_TONE, Section, td, th } from "@/components/ui";
 import { api, ApiError, type RunDetail, type RunSummary } from "@/lib/api";
 import { SCENARIOS_AR, type DictKey } from "@/lib/dict";
@@ -132,9 +133,9 @@ function PipelineInner() {
         actions={<>
           <Button onClick={() => setConfirm("crash")} disabled={busy || readOnly || health.data?.env === "production"}>{t("pl.runCrash")}</Button>
           <Button onClick={() => setConfirm("initial")} disabled={busy || readOnly}>{t("pl.runFull")}</Button>
-          <Button variant="primary" onClick={() => start.mutate({ mode: "incremental" })} busy={start.isPending && start.variables?.mode === "incremental"} disabled={busy || readOnly}>
+          <PrimaryAction onClick={() => start.mutate({ mode: "incremental" })} busy={start.isPending && start.variables?.mode === "incremental"} disabled={busy || readOnly}>
             <Play className="size-4 rtl:rotate-180" aria-hidden /> {t("pl.runInc")}
-          </Button>
+          </PrimaryAction>
         </>} />
 
       {readOnly && <div className="mb-4"><Notice tone="warn">{t("pl.readOnly")}</Notice></div>}

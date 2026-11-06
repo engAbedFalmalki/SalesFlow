@@ -12,6 +12,11 @@ __pycache__/
 # node / next
 frontend/node_modules/
 frontend/.next/
+frontend/.next-public/
+frontend/.next-static/
+frontend/.next-netlify/
+.netlify/
+frontend/.netlify/
 frontend/next-env.d.ts
 frontend/test-results/
 frontend/playwright-report/

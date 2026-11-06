@@ -5,10 +5,11 @@ import clsx from "clsx";
 import { ArrowDown, ArrowUp, ChevronsUpDown, FileSpreadsheet, Plus, Search } from "lucide-react";
 import { Suspense, useEffect, useState } from "react";
 import { DateRangeControl } from "@/components/date-range";
+import { PrimaryAction } from "@/components/motion";
 import { OrderDrawer } from "@/components/order-drawer";
 import { PurchaseDrawer } from "@/components/purchase-drawer";
 import { Badge, Button, COLLECTION_TONE, Empty, ErrorState, Field, inputClass, Loading, ORDER_TONE, PageHeader, Pagination, Panel, Select, Skeleton, ToggleChip, td, th } from "@/components/ui";
-import { api } from "@/lib/api";
+import { api, downloadStaticOrdersXlsx, STATIC_DATA } from "@/lib/api";
 import type { DictKey } from "@/lib/dict";
 import { bizDate, count, latinDigits, money } from "@/lib/format";
 import { useDateRange, useHealth, usePlaceName, useUrlState } from "@/lib/hooks";
@@ -42,6 +43,7 @@ function SalesInner() {
   const page = Number(sp.get("page") ?? "1");
   const openOrder = sp.get("order");
   const [purchaseOpen, setPurchaseOpen] = useState(false);
+  const [exporting, setExporting] = useState(false);
   const [search, setSearch] = useState(orderParam);
   useEffect(() => setSearch(orderParam), [orderParam]);
   useEffect(() => {
@@ -117,10 +119,19 @@ function SalesInner() {
           {canPurchase && (
             <Button onClick={() => setPurchaseOpen(true)}><Plus className="size-4" aria-hidden /> {t("sales.addPurchase")}</Button>
           )}
-          <a href={from && to ? api.url("/api/orders/export.xlsx", exportParams) : undefined} aria-disabled={!q.data?.total}
-            className={clsx("inline-flex h-10 items-center gap-2 rounded-md bg-accent px-4 text-sm font-medium text-white hover:bg-accent-strong", !q.data?.total && "pointer-events-none opacity-50")}>
-            <FileSpreadsheet className="size-4" aria-hidden /> {t("sales.exportXlsx")}
-          </a>
+          {STATIC_DATA ? (
+            <PrimaryAction busy={exporting} disabled={!q.data?.total} onClick={() => {
+              setExporting(true);
+              downloadStaticOrdersXlsx({ ...params, date_from: from!, date_to: to!, status: statuses, order_id: params.order_id }, lang, filters.data)
+                .finally(() => setExporting(false));
+            }}>
+              <FileSpreadsheet className="size-4" aria-hidden /> {t("sales.exportXlsx")}
+            </PrimaryAction>
+          ) : (
+            <PrimaryAction href={from && to ? api.url("/api/orders/export.xlsx", exportParams) : ""} disabled={!q.data?.total}>
+              <FileSpreadsheet className="size-4" aria-hidden /> {t("sales.exportXlsx")}
+            </PrimaryAction>
+          )}
         </div>
       </div>
 
