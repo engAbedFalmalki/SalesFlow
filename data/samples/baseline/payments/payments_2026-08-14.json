@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-08-14",
+  "generated_at": "2026-08-14T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000021",
+      "order_id": 1026,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "134.05",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-08-14T18:53:37Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000022",
+      "order_id": 1027,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "399.51",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-08-14T19:46:29Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000023",
+      "order_id": 1028,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "300.90",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-08-14T19:51:36Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

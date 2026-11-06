@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-09-27",
+  "generated_at": "2026-09-27T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000121",
+      "order_id": 1120,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "80.85",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-09-27T06:31:24Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000122",
+      "order_id": 1121,
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": "247.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-27T20:43:53Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000123",
+      "order_id": 1121,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "247.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-27T20:45:53Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

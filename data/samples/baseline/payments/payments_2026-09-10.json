@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-09-10",
+  "generated_at": "2026-09-10T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000075",
+      "order_id": 1079,
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": "35.66",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-09-09T22:55:08Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000076",
+      "order_id": 1079,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "35.66",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-09T22:58:08Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000077",
+      "order_id": 1080,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "628.85",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-09-10T06:36:08Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000078",
+      "order_id": 1081,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "59.95",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-09-10T06:48:35Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000079",
+      "order_id": 1082,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "797.80",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-10T08:10:15Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000080",
+      "order_id": 1083,
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": "41.70",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-10T17:52:17Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000081",
+      "order_id": 1083,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "41.70",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-10T18:00:17Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

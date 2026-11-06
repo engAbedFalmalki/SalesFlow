@@ -1,0 +1,199 @@
+{
+ "customers": [],
+ "orders": [
+  {
+   "order_id": 1401,
+   "customer_id": 27,
+   "order_placed_at": "2026-11-03T07:00:00.000",
+   "status": "processing",
+   "currency": "SAR",
+   "channel": "app",
+   "created_at": "2026-11-03T07:00:00.000",
+   "updated_at": "2026-11-03T07:00:00.000"
+  },
+  {
+   "order_id": 1402,
+   "customer_id": 29,
+   "order_placed_at": "2026-11-03T07:17:00.000",
+   "status": "processing",
+   "currency": "SAR",
+   "channel": "app",
+   "created_at": "2026-11-03T07:17:00.000",
+   "updated_at": "2026-11-03T07:17:00.000"
+  },
+  {
+   "order_id": 1403,
+   "customer_id": 34,
+   "order_placed_at": "2026-11-03T07:34:00.000",
+   "status": "processing",
+   "currency": "SAR",
+   "channel": "app",
+   "created_at": "2026-11-03T07:34:00.000",
+   "updated_at": "2026-11-03T07:34:00.000"
+  },
+  {
+   "order_id": 1404,
+   "customer_id": 36,
+   "order_placed_at": "2026-11-03T07:51:00.000",
+   "status": "processing",
+   "currency": "SAR",
+   "channel": "app",
+   "created_at": "2026-11-03T07:51:00.000",
+   "updated_at": "2026-11-03T07:51:00.000"
+  },
+  {
+   "order_id": 1405,
+   "customer_id": 12,
+   "order_placed_at": "2026-11-03T08:08:00.000",
+   "status": "processing",
+   "currency": "SAR",
+   "channel": "app",
+   "created_at": "2026-11-03T08:08:00.000",
+   "updated_at": "2026-11-03T08:08:00.000"
+  },
+  {
+   "order_id": 1406,
+   "customer_id": 15,
+   "order_placed_at": "2026-11-03T08:25:00.000",
+   "status": "processing",
+   "currency": "SAR",
+   "channel": "web",
+   "created_at": "2026-11-03T08:25:00.000",
+   "updated_at": "2026-11-03T08:25:00.000"
+  }
+ ],
+ "order_items": [
+  {
+   "order_item_id": 1002001,
+   "order_id": 1401,
+   "line_number": 1,
+   "product_sku": "SKU-00035",
+   "quantity": 1,
+   "unit_price": "112.95",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:00:00.000",
+   "updated_at": "2026-11-03T07:00:00.000"
+  },
+  {
+   "order_item_id": 1002002,
+   "order_id": 1401,
+   "line_number": 2,
+   "product_sku": "SKU-90001",
+   "quantity": 1,
+   "unit_price": "59.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:00:00.000",
+   "updated_at": "2026-11-03T07:00:00.000"
+  },
+  {
+   "order_item_id": 1002003,
+   "order_id": 1402,
+   "line_number": 1,
+   "product_sku": "SKU-00007",
+   "quantity": 1,
+   "unit_price": "121.95",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:17:00.000",
+   "updated_at": "2026-11-03T07:17:00.000"
+  },
+  {
+   "order_item_id": 1002004,
+   "order_id": 1402,
+   "line_number": 2,
+   "product_sku": "SKU-90002",
+   "quantity": 1,
+   "unit_price": "59.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:17:00.000",
+   "updated_at": "2026-11-03T07:17:00.000"
+  },
+  {
+   "order_item_id": 1002005,
+   "order_id": 1403,
+   "line_number": 1,
+   "product_sku": "SKU-00021",
+   "quantity": 2,
+   "unit_price": "317.95",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:34:00.000",
+   "updated_at": "2026-11-03T07:34:00.000"
+  },
+  {
+   "order_item_id": 1002006,
+   "order_id": 1403,
+   "line_number": 2,
+   "product_sku": "SKU-90003",
+   "quantity": 1,
+   "unit_price": "129.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:34:00.000",
+   "updated_at": "2026-11-03T07:34:00.000"
+  },
+  {
+   "order_item_id": 1002007,
+   "order_id": 1404,
+   "line_number": 1,
+   "product_sku": "SKU-00012",
+   "quantity": 2,
+   "unit_price": "31.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:51:00.000",
+   "updated_at": "2026-11-03T07:51:00.000"
+  },
+  {
+   "order_item_id": 1002008,
+   "order_id": 1404,
+   "line_number": 2,
+   "product_sku": "SKU-90004",
+   "quantity": 1,
+   "unit_price": "59.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T07:51:00.000",
+   "updated_at": "2026-11-03T07:51:00.000"
+  },
+  {
+   "order_item_id": 1002009,
+   "order_id": 1405,
+   "line_number": 1,
+   "product_sku": "SKU-00014",
+   "quantity": 1,
+   "unit_price": "444.95",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T08:08:00.000",
+   "updated_at": "2026-11-03T08:08:00.000"
+  },
+  {
+   "order_item_id": 1002010,
+   "order_id": 1405,
+   "line_number": 2,
+   "product_sku": "SKU-90005",
+   "quantity": 1,
+   "unit_price": "59.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T08:08:00.000",
+   "updated_at": "2026-11-03T08:08:00.000"
+  },
+  {
+   "order_item_id": 1002011,
+   "order_id": 1406,
+   "line_number": 1,
+   "product_sku": "SKU-00025",
+   "quantity": 1,
+   "unit_price": "19.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T08:25:00.000",
+   "updated_at": "2026-11-03T08:25:00.000"
+  },
+  {
+   "order_item_id": 1002012,
+   "order_id": 1406,
+   "line_number": 2,
+   "product_sku": "SKU-90006",
+   "quantity": 1,
+   "unit_price": "129.00",
+   "discount_amount": "0.00",
+   "created_at": "2026-11-03T08:25:00.000",
+   "updated_at": "2026-11-03T08:25:00.000"
+  }
+ ]
+}

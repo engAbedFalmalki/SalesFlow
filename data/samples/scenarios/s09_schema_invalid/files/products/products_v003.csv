@@ -1,0 +1,6 @@
+product_sku,product_name,category,price,is_active,updated_at
+SKU-00001,Bayt Classic Water Kettle,Home & Kitchen,100.00,true,2026-07-31T21:00:00Z
+SKU-00002,Sawt Pro Bluetooth Speaker,Electronics,300.00,true,2026-07-31T21:00:00Z
+SKU-00003,Faris Premium Bluetooth Speaker,Electronics,2518.95,false,2026-07-31T21:00:00Z
+SKU-00004,Qamar Premium Action Camera,Electronics,148.95,true,2026-07-31T21:00:00Z
+SKU-00005,Sahra Eco Gaming Mouse,Electronics,2533.95,true,2026-07-31T21:00:00Z

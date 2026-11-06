@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* SalesFlow design tokens. One accent (palm green); status colours only for status. */
+@theme {
+  --font-sans: var(--font-plex), var(--font-plex-ar), ui-sans-serif, "Segoe UI", Tahoma, system-ui, sans-serif;
+
+  --color-paper: #f6f7f5;
+  --color-surface: #ffffff;
+  --color-ink: #1d2925;
+  --color-muted: #5a6a63;
+  --color-faint: #8a9892;
+  --color-line: #dce2de;
+  --color-line-strong: #c3ccc7;
+  --color-hover: #eef1ee;
+
+  --color-accent: #0e6a4e;
+  --color-accent-strong: #0a523c;
+  --color-accent-soft: #e3f0ea;
+  --color-collect: #3e5368;      /* transaction-date series (neutral slate) */
+
+  --color-ok: #1f7a4d;
+  --color-ok-soft: #e4f3ea;
+  --color-warn: #8a5a00;
+  --color-warn-soft: #fbf0d9;
+  --color-bad: #b42318;
+  --color-bad-soft: #fdecea;
+  --color-info: #3e5368;
+  --color-info-soft: #e8edf2;
+}
+
+html { background: var(--color-paper); color: var(--color-ink); }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 4px; }
+
+/* Date-basis markers: solid = order date, dashed = transaction date. */
+.basis-order { border-top: 3px solid var(--color-accent); }
+.basis-txn { border-top: 3px dashed var(--color-collect); }
+.mark-order { display: inline-block; width: 16px; height: 0; border-top: 3px solid var(--color-accent); vertical-align: middle; }
+.mark-txn { display: inline-block; width: 16px; height: 0; border-top: 3px dashed var(--color-collect); vertical-align: middle; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

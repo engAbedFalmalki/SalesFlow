@@ -1,0 +1,41 @@
+product_sku,product_name,category,list_price,currency,is_active,updated_at
+SKU-00001,Bayt Classic Water Kettle,Home & Kitchen,100.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00002,Sawt Pro Bluetooth Speaker,Electronics,300.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00003,Faris Premium Bluetooth Speaker,Electronics,2518.95,SAR,false,2026-07-31T21:00:00Z
+SKU-00004,Qamar Premium Action Camera,Electronics,148.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00005,Sahra Eco Gaming Mouse,Electronics,2533.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00006,Nakheel Essential Cookware Set,Home & Kitchen,59.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00007,Qamar Compact Coffee Maker,Home & Kitchen,121.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00008,Noorah Signature Knife Set,Home & Kitchen,80.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00009,Darb Eco Water Kettle,Home & Kitchen,343.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00010,Tilal Royal Coffee Maker,Home & Kitchen,181.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00011,Bayt Essential Dinner Set,Home & Kitchen,72.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00012,Wadi Compact Coffee Maker,Home & Kitchen,31.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00013,Bayt Royal Hoodie,Fashion,218.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00014,Darb Lite Sunglasses,Fashion,444.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00015,Rimal Deluxe Denim Jacket,Fashion,520.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00016,Qamar Eco Shemagh,Fashion,60.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00017,Darb Signature Abaya,Fashion,120.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00018,Bayt Classic Sneakers,Fashion,126.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00019,Noorah Signature Sandals,Fashion,56.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00020,Najm Deluxe Abaya,Fashion,109.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00021,Darb Ultra Oud Perfume,Beauty & Personal Care,317.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00022,Sawt Compact Sunscreen,Beauty & Personal Care,381.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00023,Tilal Lite Electric Shaver,Beauty & Personal Care,227.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00024,Darb Essential Face Serum,Beauty & Personal Care,91.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00025,Nakheel Everyday Oud Perfume,Beauty & Personal Care,19.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00026,Sahra Essential Lip Care Set,Beauty & Personal Care,59.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00027,Bayt Eco Basmati Rice,Grocery & Gourmet,6.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00028,Wadi Premium Honey Jar,Grocery & Gourmet,10.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00029,Darb Pro Arabic Coffee,Grocery & Gourmet,6.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00030,Qamar Deluxe Saffron,Grocery & Gourmet,5.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00031,Qamar Classic Basmati Rice,Grocery & Gourmet,57.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00032,Najm Eco Arabic Coffee,Grocery & Gourmet,7.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00033,Noorah Compact Fitness Tracker,Sports & Outdoors,41.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00034,Sawt Classic Camping Tent,Sports & Outdoors,133.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00035,Najm Essential Football,Sports & Outdoors,112.95,SAR,true,2026-07-31T21:00:00Z
+SKU-00036,Bayt Lite Fitness Tracker,Sports & Outdoors,61.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00037,Qamar Royal Card Game,Toys & Games,52.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00038,Bayt Royal Science Kit,Toys & Games,313.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00039,Nakheel Pro Sketchbook,Books & Stationery,15.00,SAR,true,2026-07-31T21:00:00Z
+SKU-00040,Rimal Premium Weekly Planner,Books & Stationery,9.00,SAR,true,2026-07-31T21:00:00Z

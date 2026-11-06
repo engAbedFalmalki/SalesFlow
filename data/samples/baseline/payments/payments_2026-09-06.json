@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-09-06",
+  "generated_at": "2026-09-06T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "RFD-0000006",
+      "order_id": 1054,
+      "transaction_type": "refund",
+      "status": "succeeded",
+      "amount": "15.00",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-09-06T00:15:00Z",
+      "refers_to_transaction_id": "PAY-0000050"
+    },
+    {
+      "transaction_id": "PAY-0000068",
+      "order_id": 1072,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "218.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-06T20:02:45Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

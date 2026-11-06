@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-11-05_types",
+  "generated_at": "2026-11-04T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-S09-0002",
+      "order_id": 1051,
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": "15.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-05T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S09-0003",
+      "order_id": 1051,
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": true,
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-05T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S09-0004",
+      "order_id": "abc",
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": "15.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-05T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    "garbage-record"
+  ]
+}

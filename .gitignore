@@ -1,0 +1,26 @@
+# secrets / local config
+.env
+.env.docker
+frontend/.env.local
+
+# python
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# node / next
+frontend/node_modules/
+frontend/.next/
+frontend/next-env.d.ts
+frontend/test-results/
+frontend/playwright-report/
+*.tsbuildinfo
+
+# generated data (regenerate with: python -m salesflow generate). data/samples is committed.
+data/baseline/
+data/scenarios/
+data/landing/
+
+# local logs / editor
+*.log

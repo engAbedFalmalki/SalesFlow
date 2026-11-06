@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-10-27",
+  "generated_at": "2026-10-27T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000199",
+      "order_id": 1193,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "5.95",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-10-27T00:17:03Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

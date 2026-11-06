@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-08-21",
+  "generated_at": "2026-08-21T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000037",
+      "order_id": 1025,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "365.85",
+      "currency": "SAR",
+      "payment_method": "cash_on_delivery",
+      "transaction_at": "2026-08-20T23:35:01Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000038",
+      "order_id": 1041,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "670.95",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-08-21T02:59:58Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000039",
+      "order_id": 1042,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "232.95",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-08-21T10:29:24Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000040",
+      "order_id": 1044,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "680.90",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-08-21T11:56:28Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000041",
+      "order_id": 1045,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "106.95",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-08-21T14:01:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000042",
+      "order_id": 1046,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "300.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-08-21T17:34:22Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

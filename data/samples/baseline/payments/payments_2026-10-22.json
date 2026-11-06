@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-10-22",
+  "generated_at": "2026-10-22T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000183",
+      "order_id": 1179,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "92.65",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-10-22T07:57:14Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

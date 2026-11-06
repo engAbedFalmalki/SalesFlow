@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-08-23",
+  "generated_at": "2026-08-23T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "RFD-0000005",
+      "order_id": 1045,
+      "transaction_type": "refund",
+      "status": "succeeded",
+      "amount": "106.95",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-08-23T05:33:53Z",
+      "refers_to_transaction_id": "PAY-0000041"
+    }
+  ]
+}

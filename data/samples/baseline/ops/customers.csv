@@ -1,0 +1,61 @@
+customer_id,customer_code,first_name,last_name,email,city,created_at,updated_at
+1,C00001,Aisha,Al-Qaderi,aisha.alqaderi1@example.com,Rafha,2025-05-04T01:57:11.000,2025-05-04T01:57:11.000
+2,C00002,Bandar,Al-Sulami,bandar.alsulami2@example.com,Al Hinakiyah,2026-08-30T01:44:00.000,2026-08-30T01:44:00.000
+3,C00003,Bandar,Al-Qalami,bandar.alqalami3@example.com,Tabuk,2026-08-25T04:30:19.000,2026-08-25T04:30:19.000
+4,C00004,Khalid,Al-Jalowi,khalid.aljalowi4@example.com,Riyadh,2026-09-07T08:48:48.000,2026-09-07T08:48:48.000
+5,C00005,Hessa,Al-Tabari,hessa.altabari5@example.com,Tabuk,2025-03-20T05:46:30.000,2025-03-20T05:46:30.000
+6,C00006,Tariq,Al-Zawani,tariq.alzawani6@example.com,Madinah,2025-09-09T17:05:45.000,2025-09-09T17:05:45.000
+7,C00007,Abeer,Al-Falowi,abeer.alfalowi7@example.com,Jeddah,2026-08-05T18:17:52.000,2026-08-05T18:17:52.000
+8,C00008,Nawaf,Al-Dawani,nawaf.aldawani8@example.com,Hafr Al Batin,2026-05-03T04:51:00.000,2026-05-03T04:51:00.000
+9,C00009,Shahad,Al-Basari,shahad.albasari9@example.com,Riyadh,2025-11-12T14:25:28.000,2025-11-12T14:25:28.000
+10,C00010,Lulwa,Al-Hatami,lulwa.alhatami10@example.com,Baljurashi,2025-03-15T06:58:03.000,2025-03-15T06:58:03.000
+11,C00011,Faisal,Al-Kafiri,faisal.alkafiri11@example.com,Jeddah,2026-07-31T15:22:01.000,2026-07-31T15:22:01.000
+12,C00012,Yousef,Al-Bafiri,yousef.albafiri12@example.com,Unaizah,2025-05-23T17:45:34.000,2025-05-23T17:45:34.000
+13,C00013,Jana,Al-Raderi,jana.alraderi13@example.com,Riyadh,2026-06-01T04:38:04.000,2026-06-01T04:38:04.000
+14,C00014,Aisha,Al-Kahani,aisha.alkahani14@example.com,Al Kharj,2026-05-12T03:39:33.000,2026-05-12T03:39:33.000
+15,C00015,Majed,Al-Kamani,majed.alkamani15@example.com,Ad Diriyah,2025-04-19T04:11:37.000,2025-04-19T04:11:37.000
+16,C00016,Lina,Al-Rahani,lina.alrahani16@example.com,Riyadh,2025-01-28T23:12:26.000,2025-01-28T23:12:26.000
+17,C00017,Yousef,Al-Qaderi,yousef.alqaderi17@example.com,Riyadh,2025-02-09T06:13:16.000,2025-02-09T06:13:16.000
+18,C00018,Maha,Al-Tawani,maha.altawani18@example.com,Al Qurayyat,2026-07-06T05:23:24.000,2026-07-06T05:23:24.000
+19,C00019,Sara,Al-Haderi,sara.alhaderi19@example.com,Madinah,2026-10-02T03:04:19.000,2026-10-02T03:04:19.000
+20,C00020,Razan,Al-Rawani,razan.alrawani20@example.com,Duba,2026-08-01T07:40:40.000,2026-08-01T07:40:40.000
+21,C00021,Rana,Al-Taderi,rana.altaderi21@example.com,Abu Arish,2026-08-19T17:37:13.000,2026-08-19T17:37:13.000
+22,C00022,Majed,Al-Dahani,majed.aldahani22@example.com,Jeddah,2026-08-03T02:48:49.000,2026-08-03T02:48:49.000
+23,C00023,Maha,Al-Nalowi,maha.alnalowi23@example.com,Jeddah,2026-09-26T22:08:04.000,2026-09-26T22:08:04.000
+24,C00024,Hamad,Al-Sulowi,hamad.alsulowi24@example.com,Jeddah,2025-03-11T22:31:18.000,2025-03-11T22:31:18.000
+25,C00025,Fahad,Al-Satami,fahad.alsatami25@example.com,Madinah,2026-09-16T12:21:52.000,2026-09-16T12:21:52.000
+26,C00026,Maha,Al-Suzuri,maha.alsuzuri26@example.com,Yanbu,2025-10-08T16:44:47.000,2025-10-08T16:44:47.000
+27,C00027,Khalid,Al-Subari,khalid.alsubari27@example.com,Tabuk,2026-01-21T16:30:15.000,2026-01-21T16:30:15.000
+28,C00028,Reem,Al-Zawani,reem.alzawani28@example.com,Hail,2025-08-06T04:20:02.000,2025-08-06T04:20:02.000
+29,C00029,Maha,Al-Watami,maha.alwatami29@example.com,Hafr Al Batin,2025-02-15T11:23:49.000,2025-02-15T11:23:49.000
+30,C00030,Reem,Al-Qabari,reem.alqabari30@example.com,Riyadh,2025-08-26T06:35:14.000,2025-08-26T06:35:14.000
+31,C00031,Huda,Al-Rahani,huda.alrahani31@example.com,Jeddah,2026-04-07T15:48:27.000,2026-04-07T15:48:27.000
+32,C00032,Reem,Al-Tawani,reem.altawani32@example.com,Riyadh,2026-05-15T18:21:10.000,2026-05-15T18:21:10.000
+33,C00033,Reem,Al-Kahani,reem.alkahani33@example.com,Riyadh,2026-09-09T08:26:35.000,2026-09-09T08:26:35.000
+34,C00034,Faisal,Al-Hafiri,faisal.alhafiri34@example.com,Dammam,2025-02-02T23:45:57.000,2025-02-02T23:45:57.000
+35,C00035,Hessa,Al-Sulami,hessa.alsulami35@example.com,Riyadh,2026-09-10T20:39:58.000,2026-09-10T20:39:58.000
+36,C00036,Fahad,Al-Rawani,fahad.alrawani36@example.com,Riyadh,2025-08-05T22:39:27.000,2025-08-05T22:39:27.000
+37,C00037,Aisha,Al-Ratami,aisha.alratami37@example.com,Riyadh,2025-06-08T15:37:04.000,2025-06-08T15:37:04.000
+38,C00038,Yousef,Al-Qalami,yousef.alqalami38@example.com,Taif,2026-08-26T06:36:12.000,2026-08-26T06:36:12.000
+39,C00039,Faisal,Al-Hasari,faisal.alhasari39@example.com,Umluj,2026-04-09T05:14:38.000,2026-04-09T05:14:38.000
+40,C00040,Amal,Al-Kabari,amal.alkabari40@example.com,Riyadh,2025-01-24T04:59:17.000,2025-01-24T04:59:17.000
+41,C00041,Leen,Al-Kamani,leen.alkamani41@example.com,Makkah,2025-08-13T10:09:30.000,2025-08-13T10:09:30.000
+42,C00042,Ghada,Al-Salami,ghada.alsalami42@example.com,Riyadh,2025-06-06T13:37:24.000,2025-06-06T13:37:24.000
+43,C00043,Abeer,Al-Fahani,abeer.alfahani43@example.com,Jazan,2026-08-10T22:54:14.000,2026-08-10T22:54:14.000
+44,C00044,Bandar,Al-Qabari,bandar.alqabari44@example.com,Yanbu,2025-12-24T01:30:31.000,2025-12-24T01:30:31.000
+45,C00045,Hessa,Al-Tamani,hessa.altamani45@example.com,Riyadh,2026-04-11T10:10:20.000,2026-04-11T10:10:20.000
+46,C00046,Wafa,Al-Tafiri,wafa.altafiri46@example.com,Al Qunfudhah,2025-05-18T08:57:57.000,2025-05-18T08:57:57.000
+47,C00047,Nasser,Al-Suzuri,nasser.alsuzuri47@example.com,Jeddah,2026-09-10T13:54:56.000,2026-09-10T13:54:56.000
+48,C00048,Malak,Al-Mamani,malak.almamani48@example.com,Sakaka,2026-06-27T19:45:56.000,2026-06-27T19:45:56.000
+49,C00049,Yousef,Al-Nasari,yousef.alnasari49@example.com,Al Ahsa,2026-08-08T13:09:49.000,2026-08-08T13:09:49.000
+50,C00050,Majed,Al-Qabari,majed.alqabari50@example.com,Turaif,2026-07-17T08:23:14.000,2026-07-17T08:23:14.000
+51,C00051,Saleh,Al-Qaderi,saleh.alqaderi51@example.com,Hafr Al Batin,2025-09-22T18:19:44.000,2025-09-22T18:19:44.000
+52,C00052,Ziyad,Al-Sahani,ziyad.alsahani52@example.com,Unaizah,2026-05-03T05:58:25.000,2026-05-03T05:58:25.000
+53,C00053,Nasser,Al-Dasari,nasser.aldasari53@example.com,Jeddah,2026-08-16T11:43:09.000,2026-08-16T11:43:09.000
+54,C00054,Nasser,Al-Tabari,nasser.altabari54@example.com,Makkah,2026-01-07T17:01:32.000,2026-01-07T17:01:32.000
+55,C00055,Razan,Al-Mamani,razan.almamani55@example.com,Taif,2026-09-19T22:34:47.000,2026-09-19T22:34:47.000
+56,C00056,Adel,Al-Qaderi,adel.alqaderi56@example.com,Abha,2025-04-17T19:50:02.000,2025-04-17T19:50:02.000
+57,C00057,Sultan,Al-Naderi,sultan.alnaderi57@example.com,Riyadh,2025-02-18T09:28:32.000,2026-07-28T19:46:51.000
+58,C00058,Mazen,Al-Zazuri,mazen.alzazuri58@example.com,Makkah,2026-04-19T19:11:50.000,2026-04-19T19:11:50.000
+59,C00059,Wafa,Al-Nawani,wafa.alnawani59@example.com,Makkah,2026-08-28T15:34:07.000,2026-08-28T15:34:07.000
+60,C00060,Amal,Al-Dasari,amal.aldasari60@example.com,Jeddah,2025-07-17T19:31:47.000,2025-07-17T19:31:47.000

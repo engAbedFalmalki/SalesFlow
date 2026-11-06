@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-10_late_cod",
+  "generated_at": "2026-11-02T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000162",
+      "order_id": 1149,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "331.00",
+      "currency": "SAR",
+      "payment_method": "cash_on_delivery",
+      "transaction_at": "2026-10-13T10:02:34Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000190",
+      "order_id": 1168,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "59.95",
+      "currency": "SAR",
+      "payment_method": "cash_on_delivery",
+      "transaction_at": "2026-10-24T04:11:56Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000197",
+      "order_id": 1177,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "59.95",
+      "currency": "SAR",
+      "payment_method": "cash_on_delivery",
+      "transaction_at": "2026-10-25T21:59:00Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

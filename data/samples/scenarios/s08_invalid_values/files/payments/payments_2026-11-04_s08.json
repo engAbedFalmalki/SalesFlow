@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-11-04_s08",
+  "generated_at": "2026-11-05T06:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-S08-0001",
+      "order_id": 1501,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "50.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0002",
+      "order_id": 1502,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "75.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0003",
+      "order_id": 1503,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "-75.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0004",
+      "order_id": 1504,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "10.00",
+      "currency": "USD",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0005",
+      "order_id": 1501,
+      "transaction_type": "payment",
+      "status": "maybe",
+      "amount": "10.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "RFD-S08-0006",
+      "order_id": 1502,
+      "transaction_type": "refund",
+      "status": "succeeded",
+      "amount": "10.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": "PAY-DOES-NOT-EXIST"
+    },
+    {
+      "transaction_id": "RFD-S08-0007",
+      "order_id": 1110,
+      "transaction_type": "refund",
+      "status": "succeeded",
+      "amount": "283.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": "PAY-0000111"
+    },
+    {
+      "transaction_id": "PAY-S08-0008",
+      "order_id": 1123,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "10.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-26T16:44:50Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0009",
+      "order_id": 1501,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "11.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0009",
+      "order_id": 1501,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "12.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0010",
+      "order_id": null,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "10.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0011",
+      "order_id": 888888,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "10.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0012",
+      "order_id": 1502,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "10.555",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-S08-0013",
+      "order_id": 1502,
+      "transaction_type": "chargeback",
+      "status": "succeeded",
+      "amount": "10.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-11-04T08:00:00Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

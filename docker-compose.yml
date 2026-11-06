@@ -1,0 +1,58 @@
+# UNVERIFIED: Docker is not installed on the machine this project was built and
+# tested on. The verified setup is a local SQL Server 2025 Express instance with
+# Windows authentication (see README). This file is provided as a starting point.
+#
+#   cp .env.docker.example .env.docker   # set a strong MSSQL_SA_PASSWORD
+#   docker compose --env-file .env.docker up --build
+#
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?set MSSQL_SA_PASSWORD in .env.docker}
+    ports: ["127.0.0.1:1433:1433"]
+    volumes: [mssql-data:/var/opt/mssql]
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      retries: 12
+
+  api:
+    build: ./backend
+    depends_on:
+      sqlserver: { condition: service_healthy }
+    environment: &backend_env
+      SALESFLOW_ENV: development
+      SALESFLOW_SQL_SERVER: sqlserver
+      SALESFLOW_SQL_AUTH: sql
+      SALESFLOW_SQL_USER: sa
+      SALESFLOW_SQL_PASSWORD: ${MSSQL_SA_PASSWORD}
+      SALESFLOW_RESET_ALLOWED_SERVERS: '["sqlserver"]'
+      SALESFLOW_API_HOST: 0.0.0.0
+      SALESFLOW_DATA_DIR: /app/data
+      SALESFLOW_CORS_ORIGINS: '["http://localhost:3000","http://127.0.0.1:3000"]'
+    volumes: [./data:/app/data]
+    # Bound to localhost only: pipeline controls must never be exposed publicly without a token.
+    ports: ["127.0.0.1:8000:8000"]
+    command: >
+      sh -c "python -m salesflow migrate && python -m salesflow api"
+
+  worker:
+    build: ./backend
+    depends_on: [api]
+    environment: *backend_env
+    volumes: [./data:/app/data]
+    command: python -m salesflow worker
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_BASE_URL: http://127.0.0.1:8000
+    depends_on: [api]
+    ports: ["127.0.0.1:3000:3000"]
+
+volumes:
+  mssql-data:

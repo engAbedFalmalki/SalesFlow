@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-09-15",
+  "generated_at": "2026-09-15T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000092",
+      "order_id": 1087,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "347.70",
+      "currency": "SAR",
+      "payment_method": "cash_on_delivery",
+      "transaction_at": "2026-09-15T13:34:34Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[project]
+name = "salesflow"
+version = "1.0.0"
+description = "SalesFlow: sales data warehouse & analytics (synthetic data portfolio project)"
+requires-python = ">=3.12,<3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+addopts = "-ra"
+filterwarnings = ["ignore::DeprecationWarning"]

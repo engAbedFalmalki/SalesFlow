@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-08-12",
+  "generated_at": "2026-08-12T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000019",
+      "order_id": 1022,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "179.90",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-08-12T10:00:27Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-09-11",
+  "generated_at": "2026-09-11T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000082",
+      "order_id": 1084,
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": "53.90",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-09-11T04:07:25Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000083",
+      "order_id": 1084,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "53.90",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-11T04:13:25Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000084",
+      "order_id": 1085,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "133.95",
+      "currency": "SAR",
+      "payment_method": "stc_pay",
+      "transaction_at": "2026-09-11T04:29:31Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000085",
+      "order_id": 1086,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "23.80",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-09-11T07:41:30Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000086",
+      "order_id": 1088,
+      "transaction_type": "payment",
+      "status": "failed",
+      "amount": "381.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-11T17:17:30Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000087",
+      "order_id": 1088,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "381.00",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-11T17:20:30Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}

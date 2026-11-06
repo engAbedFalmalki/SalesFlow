@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-10-11",
+  "generated_at": "2026-10-11T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000160",
+      "order_id": 1157,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "760.45",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-10-11T07:09:12Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "RFD-0000007",
+      "order_id": 1148,
+      "transaction_type": "refund",
+      "status": "succeeded",
+      "amount": "543.85",
+      "currency": "SAR",
+      "payment_method": "credit_card",
+      "transaction_at": "2026-10-11T11:02:27Z",
+      "refers_to_transaction_id": "PAY-0000152"
+    }
+  ]
+}

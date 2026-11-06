@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "source_system": "payment_gateway",
+  "batch_id": "payments_2026-09-20",
+  "generated_at": "2026-09-20T23:00:00Z",
+  "transactions": [
+    {
+      "transaction_id": "PAY-0000107",
+      "order_id": 1106,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "148.95",
+      "currency": "SAR",
+      "payment_method": "mada",
+      "transaction_at": "2026-09-20T12:31:01Z",
+      "refers_to_transaction_id": null
+    },
+    {
+      "transaction_id": "PAY-0000108",
+      "order_id": 1107,
+      "transaction_type": "payment",
+      "status": "succeeded",
+      "amount": "2787.95",
+      "currency": "SAR",
+      "payment_method": "apple_pay",
+      "transaction_at": "2026-09-20T17:04:26Z",
+      "refers_to_transaction_id": null
+    }
+  ]
+}
